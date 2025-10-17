@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Arial-BoldMT";
+  src: url("assets/Fonts/Arial-BoldMT");
+}
+
+@font-face {
+  font-family: "BuurtCampusArial-Bold";
+  src: url("assets/Fonts/BuurtCampusArial-Bold");
+}
+
+*{
+    list-style: none;
+    margin: 0;
+    padding 0;
+
+}
+
+h1{
+    font-size: 2em;
+    font-family: arial, Arial-BoldMT;
+    color: rgb(51 52 103);
+
+    @media (min-width:1100px){
+        font-size: 2em;
+    }
+}
+
+p{
+    font-size: 1em;
+    font-family: arial, Arial-BoldMT;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: grey;
+    text-color: white;
+    gap: 1em;
+    /* outline: solid; */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+
+            @media (min-width: 900px) {
+            flex-direction: row;
+            place-items: center;
+        }
+}
+
+body{
+background-color: white;
+}
+
+main{
+padding: 1em;
+}
+
+li ul{
+list-style: none;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+li {
+color: black;
+list-style: none;
+}
+
+li a {
+color: white;
+text-decoration: none;
+}
+
