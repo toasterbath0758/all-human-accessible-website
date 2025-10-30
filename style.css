@@ -1,74 +1,202 @@
 @font-face {
   font-family: "Arial-BoldMT";
-  src: url("assets/Fonts/Arial-BoldMT");
+  src: url("Fonts/Arial-BoldMT.ttf");
 }
 
 @font-face {
   font-family: "BuurtCampusArial-Bold";
-  src: url("assets/Fonts/BuurtCampusArial-Bold");
+  src: url("Fonts/BuurtCampusArial-Bold.ttf");
 }
 
 *{
     list-style: none;
     margin: 0;
-    padding 0;
-
+    padding: 0;
 }
 
-h1{
-    font-size: 2em;
-    font-family: arial, Arial-BoldMT;
-    color: rgb(51 52 103);
-
-    @media (min-width:1100px){
-        font-size: 2em;
-    }
+:root {
+    --header-size: 0.7;
 }
 
-p{
-    font-size: 1em;
-    font-family: arial, Arial-BoldMT;
+.logo {
+    width: calc(150px * var(--header-size));
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background-color: grey;
-    text-color: white;
-    gap: 1em;
-    /* outline: solid; */
-    padding: 1em;
+#navList{
+    padding: 0 0 0 0;
     display: flex;
-    flex-direction: column;
+    gap: 0em;
+    justify-content: center;
+    translate: center;
+    white-space: nowrap;
+    padding-left: 1.5em;
+    flex-wrap: wrap;
 
-            @media (min-width: 900px) {
-            flex-direction: row;
-            place-items: center;
+        @media (min-width: 360px) {
+            flex-wrap: nowrap;
+        }
+
+        @media (min-width: 570px){
+        gap: 1em;
         }
 }
 
-body{
-background-color: white;
+/* knoppen in de nav */
+.navKnop{
+    color: rgb(51 52 103);
+    padding-right: 2rem;
+    translate: 0 0;
+
 }
 
-main{
-padding: 1em;
+/* hier nog even naar kijken */
+/* .navKnop::after {
+    content:"00"
+} */
+
+/* hover function met vlaggetje clipper */
+.navKnop:hover,.navKnop:focus-visible{
+    background-color: white;
+    /* padding-right: 2rem; */
+    clip-path: polygon(100% 0, calc(100% - 1.5em) 50%, 100% 100%, 0 100%, 0 0);
 }
 
-li ul{
+/* kleurverrandering als je klikt op de navKnop */
+.navKnop:active{
+    color: lightblue;
+}
+
+li{
 list-style: none;
+}
+
+li a{
+text-decoration: none;
+padding: 0.5em;
+}
+
+/* title */
+h1{
+    font-size: 18pt;
+    font-family: Arial;
+    font-weight: lighter;
+}
+
+/* platte text bold */
+p.intro {
+    font-size: 1em;
+    font-family: Arial;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+/* text bold */
+.bold {
+    font-weight: bold;
+    display: block;
+}
+
+
+/* title vertical */
+.sideTitle{
+    font-size: 28pt;
+    font-family: BuurtCampusArial-Bold;
+    font-weight: 300;
+    writing-mode:vertical-rl;
+    rotate:180deg;
+    align-items: center;
+    white-space: nowrap;
+    display: flex;
+    float: left;
+    padding: 0.5em 0 0.5em 0.5em;
+}
+
+/* Nav */
+a{
+    font-size: 0.8em;
+    font-family: Arial;
+    font-weight: bold;
+    display: block;
+}
+
+
+h6{
+    font-size: calc(2.2em * var(--header-size));
+    /* font-family: arial, Arial-BoldMT; */
+    font-family: BuurtCampusArial-Bold;
+    color: rgb(51 52 103);
+    line-height: 0.6em;
+}
+
+/* basic text */
+p{
+    font-size: 1em;
+    font-family: arial;
+    padding-bottom: 0.5em;
+}
+
+header {
+    display: flex;
+    grid-column: span 2;
+    background-color: RGB(180 189 208);
+    position: sticky;
+    z-index: 10;
+        top: 0;
+        gap: 1.5em;
+        padding: 1em 1em 0.5em 1em;
+        flex-direction: column;
+        align-items: center;
+}
+
+header > div {
 display: flex;
 flex-direction: column;
-justify-content: center;
+gap: 0.5em;
 }
 
-li {
-color: black;
-list-style: none;
+
+@media (min-width: 480px) {
+    h6{
+        /* font-size: calc(2.2em*var(--header-size)); */
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        width: 100%;
+        padding: 1em;
+        place-items: center start;
+    } 
+}       
+
+
+
+main{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 1em;
+    padding: 2em 2em 2em 2em;
+
+    @media (min-width: 900px){
+        display: grid;
+        padding: 1em 2em 0 2em;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 2fr 1fr 2fr; */
+        }
+        
+    /* @media (min-width: 570px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 1em 2em 0 2em;
+        gap: 1em;
+        } */
+    
+    }
+
+body{
+
 }
 
-li a {
-color: white;
-text-decoration: none;
-}
 
