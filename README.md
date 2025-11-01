@@ -34,7 +34,7 @@ https://github.com/toasterbath0758/all-human-accessible-website/blob/970553d5e97
 ### Body
 De structuur van de body is HEADER, MAIN en FOOTER:
 ## Header
-In de header staat de navigatiebalk met links naar verschillende onderdelen van onze website.
+In de header staat de navigatiebalk met links naar verschillende onderdelen van mijn website.
 ## Main
 in de main staat alle text en alle images
 ## Footer
