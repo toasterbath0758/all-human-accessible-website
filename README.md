@@ -11,7 +11,7 @@ Een online versie van de Buurtcampuskrant.
 ## Beschrijving
 Het project heeft een krant ‘look and feel’.
 De header heeft een blijvende navigatiebalk waardoor je op elk moment naar verschillende onderdelen van onze website kunt gaan.
-Met de navigatiebalk kan je naar de andere onderdelen op de site.
+er zijn op het moment 2 paginas.
 <hr>
 <img width="753" height="450" alt="laptop" src="https://github.com/user-attachments/assets/c37faf70-5aa0-4949-b7b1-516d5e5bbbc6" />
 
